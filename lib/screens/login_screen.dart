@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -106,6 +107,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       padding: const EdgeInsets.fromLTRB(75, 0, 75, 0),
                       child: TextField(
                         decoration: InputDecoration(
+                          prefixIcon: const Padding(
+                            padding: EdgeInsets.only(
+                                right: 10.0, left: 20.0, top: 10.0),
+                            child: FaIcon(FontAwesomeIcons.envelope),
+                          ),
+                          prefixIconColor: Colors.grey,
                           filled: true,
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
@@ -142,6 +149,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: TextField(
                         obscureText: true,
                         decoration: InputDecoration(
+                          prefixIcon: const Padding(
+                            padding: EdgeInsets.only(
+                                right: 10.0, left: 20.0, top: 10.0),
+                            child: FaIcon(FontAwesomeIcons.key),
+                          ),
+                          prefixIconColor: Colors.grey,
                           filled: true,
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
@@ -194,21 +207,31 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 50,
                       width: 325,
                       child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/');
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                        ),
-                        child: const Text(
-                          "Sign in with Google",
-                          style: TextStyle(
-                            color: Color.fromRGBO(14, 172, 168, 100),
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25,
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/');
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
                           ),
-                        ),
-                      ),
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              SizedBox(
+                                child: FaIcon(
+                                  FontAwesomeIcons.google,
+                                  color: Color.fromRGBO(14, 172, 168, 100),
+                                ),
+                              ),
+                              Text(
+                                "Sign in with Google",
+                                style: TextStyle(
+                                  color: Color.fromRGBO(14, 172, 168, 100),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                ),
+                              ),
+                            ],
+                          )),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

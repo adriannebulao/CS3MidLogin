@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -153,6 +154,12 @@ class SignUpScreen extends StatelessWidget {
                               const SizedBox(height: 5),
                               TextField(
                                 decoration: InputDecoration(
+                                  prefixIcon: const Padding(
+                                    padding: EdgeInsets.only(
+                                        right: 10.0, left: 20.0, top: 10.0),
+                                    child: FaIcon(FontAwesomeIcons.envelope),
+                                  ),
+                                  prefixIconColor: Colors.grey,
                                   filled: true,
                                   fillColor: Colors.white,
                                   border: OutlineInputBorder(
@@ -180,6 +187,12 @@ class SignUpScreen extends StatelessWidget {
                               const SizedBox(height: 5),
                               TextField(
                                 decoration: InputDecoration(
+                                  prefixIcon: const Padding(
+                                    padding: EdgeInsets.only(
+                                        right: 10.0, left: 20.0, top: 10.0),
+                                    child: FaIcon(FontAwesomeIcons.user),
+                                  ),
+                                  prefixIconColor: Colors.grey,
                                   filled: true,
                                   fillColor: Colors.white,
                                   border: OutlineInputBorder(
@@ -208,6 +221,12 @@ class SignUpScreen extends StatelessWidget {
                               TextField(
                                 obscureText: true,
                                 decoration: InputDecoration(
+                                  prefixIcon: const Padding(
+                                    padding: EdgeInsets.only(
+                                        right: 10.0, left: 20.0, top: 10.0),
+                                    child: FaIcon(FontAwesomeIcons.key),
+                                  ),
+                                  prefixIconColor: Colors.grey,
                                   filled: true,
                                   fillColor: Colors.white,
                                   border: OutlineInputBorder(
@@ -236,6 +255,12 @@ class SignUpScreen extends StatelessWidget {
                               TextField(
                                 obscureText: true,
                                 decoration: InputDecoration(
+                                  prefixIcon: const Padding(
+                                    padding: EdgeInsets.only(
+                                        right: 10.0, left: 20.0, top: 10.0),
+                                    child: FaIcon(FontAwesomeIcons.key),
+                                  ),
+                                  prefixIconColor: Colors.grey,
                                   filled: true,
                                   fillColor: Colors.white,
                                   border: OutlineInputBorder(
