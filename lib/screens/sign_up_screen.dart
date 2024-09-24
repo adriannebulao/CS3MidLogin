@@ -20,7 +20,6 @@ class SignUpScreen extends StatelessWidget {
             ),
           ),
           SingleChildScrollView(
-            physics: const NeverScrollableScrollPhysics(),
             child: Column(
               children: [
                 const SizedBox(height: 25),
@@ -51,13 +50,26 @@ class SignUpScreen extends StatelessWidget {
                     ),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    padding: const EdgeInsets.symmetric(vertical: 0),
                     child: Column(
                       children: [
-                        const Text(
-                          "START YOUR PERSONAL PHOTO EXPERIENCE",
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              icon: const Icon(Icons.arrow_back,
+                                  color: Colors.white),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                            ),
+                            const Text(
+                              "START YOUR PERSONAL PHOTO EXPERIENCE",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
                         ),
                         const Text(
                           "Register your account",
@@ -243,7 +255,9 @@ class SignUpScreen extends StatelessWidget {
                           height: 50,
                           width: 200,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/');
+                            },
                             style: ElevatedButton.styleFrom(
                                 backgroundColor:
                                     const Color.fromRGBO(14, 172, 168, 100),
