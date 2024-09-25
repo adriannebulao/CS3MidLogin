@@ -9,13 +9,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_launcher_icons: ^0.14.1
   font_awesome_flutter: ^10.7.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.14.1
 
 flutter:
   uses-material-design: true
@@ -23,15 +23,16 @@ flutter:
     - assets/images/
 
 flutter_launcher_icons:
-  android: "launcher_icon"
+  android: true
   ios: true
   image_path: "assets/images/launcher_icon.png"
-  min_sdk_android: 21 # android min sdk min:16, default 21
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/images/launcher_icon.png"
   web:
     generate: true
     image_path: "assets/images/launcher_icon.png"
-    background_color: "#FF0EACA8"
-    theme_color: "#FFFFFFFF"
+    background_color: "#0EACA8"
+    theme_color: "#0EACA8"
   windows:
     generate: true
     image_path: "assets/images/launcher_icon.png"
