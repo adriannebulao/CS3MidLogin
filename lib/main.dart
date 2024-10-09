@@ -1,3 +1,4 @@
+import 'package:cs3midlogin/screens/dashboard.dart';
 import 'package:cs3midlogin/screens/home_screen.dart';
 import 'package:cs3midlogin/screens/login_screen.dart';
 import 'package:cs3midlogin/screens/sign_up_screen.dart';
@@ -18,7 +19,8 @@ class MainApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomeScreen(),
         '/login': (context) => const LoginScreen(),
-        '/signup': (context) => const SignUpScreen()
+        '/signup': (context) => const SignUpScreen(),
+        '/dashboard': (context) => const Dashboard()
       },
     );
   }

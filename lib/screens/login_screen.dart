@@ -208,7 +208,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: 325,
                       child: ElevatedButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, '/');
+                            Navigator.pushNamed(context, '/dashboard');
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
