@@ -29,14 +29,17 @@ class _ProductsScreenState extends State<ProductsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(14, 172, 168, 100),
       body: SafeArea(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
-          child: Wrap(
-            direction: Axis.horizontal,
-            children: allProducts.map((oneProduct) {
-              return ProductCard(product: oneProduct);
-            }).toList(),
+          child: Center(
+            child: Wrap(
+              direction: Axis.horizontal,
+              children: allProducts.map((oneProduct) {
+                return ProductCard(product: oneProduct);
+              }).toList(),
+            ),
           ),
         ),
       ),
