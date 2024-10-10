@@ -1,6 +1,6 @@
 class Rating {
   final double rate;
-  final double count;
+  final int count;
 
   Rating({required this.rate, required this.count});
 }

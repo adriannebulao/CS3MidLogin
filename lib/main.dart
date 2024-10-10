@@ -1,6 +1,7 @@
 import 'package:cs3midlogin/screens/dashboard.dart';
 import 'package:cs3midlogin/screens/home_screen.dart';
 import 'package:cs3midlogin/screens/login_screen.dart';
+import 'package:cs3midlogin/screens/products_screen.dart';
 import 'package:cs3midlogin/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,8 @@ class MainApp extends StatelessWidget {
         '/': (context) => const HomeScreen(),
         '/login': (context) => const LoginScreen(),
         '/signup': (context) => const SignUpScreen(),
-        '/dashboard': (context) => const Dashboard()
+        '/dashboard': (context) => const Dashboard(),
+        '/products': (context) => const ProductsScreen()
       },
     );
   }
